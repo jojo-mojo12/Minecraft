@@ -128,3 +128,51 @@ function my_Keydown(e)
     console.log("C");
    }
 }
+
+function up()
+{
+	if (player_y >= 0)
+	{
+		player_y = player_y - block_image_height;
+		console.log("Block image height = "+ block_image_height);
+		console.log("When up arrow is pressed, X = "+ player_x+", Y = " + player_y);
+		canvas.remove(player_object);
+		player_update(player_object);
+	} 
+}
+
+function down()
+{
+	if (player_y <= 500)
+	{
+		player_y = player_y + block_image_height;
+		console.log("Block image height = "+ block_image_height);
+		console.log("When down arrow is pressed, X = "+ player_x+", Y = " + player_y);
+		canvas.remove(player_object);
+		player_update(player_object);
+	} 
+}
+
+function left()
+{
+	if (player_x >= 0)
+	{
+		player_x = player_x - block_image_width;
+		console.log("Block image width = "+ block_image_width);
+		console.log("When left arrow is pressed, X = "+ player_x+", Y = " + player_y);
+		canvas.remove(player_object);
+		player_update(player_object);
+	} 
+}
+
+function right()
+{
+	if (player_x <= 950)
+	{
+		player_x = player_x + block_image_width;
+		console.log("Block image width = "+ block_image_width);
+		console.log("When right arrow is pressed, X = "+ player_x+", Y = " + player_y);
+		canvas.remove(player_object);
+		player_update(player_object);
+	} 
+}
